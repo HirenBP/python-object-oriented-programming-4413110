@@ -4,10 +4,17 @@
 
 class Book:
     # TODO: Properties defined at the class level are shared by all instances
-
+        BOOK_TYPES = ("HARDCOVER", "PAPERBACK", "EBOOK")
+        
     # TODO: double-underscore properties are hidden from other classes
+        __booklist = None
 
     # TODO: create a class method
+    @staticmethod
+    def getbooklist(cls):
+        if cls.__booklist == None:
+            cls.__booklist = []
+        return cls.__booklist
 
     # TODO: create a static method
 
